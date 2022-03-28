@@ -19,9 +19,9 @@ function App() {
     <>
       <Header />
       <Router>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
-        <Route path="/profile/:user_id" component={Profile} />
+        <Route path="/profile" component={Profile} />
       </Router>
       <Footer />
     </>
