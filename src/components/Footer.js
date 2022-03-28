@@ -42,7 +42,7 @@ class Footer extends React.Component {
           >
             © 2022 Copyright: &nbsp;
             <a className="text-white" href="#">
-              Spotify Curator List
+              Endurance Lactate Analizer
             </a>
           </div>
         </footer>
