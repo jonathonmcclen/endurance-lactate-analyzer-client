@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Home from "./views/Home";
 import Login from "./views/Login";
 import Profile from "./views/profile";
+import Registration from "./views/Registration";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/login" component={Login} />
         <Route path="/profile" component={Profile} />
+        <Route path="/registration" component={Registration}/>
       </Router>
       <Footer />
     </>
