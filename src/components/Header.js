@@ -29,11 +29,17 @@ class Header extends React.Component {
                   </a>
                 </li>
               </ul>
-              <button className="btn btn-outline-success" type="submit">
+              <a href="/profile">Profile</a> &nbsp;
+              <a
+                href="/login"
+                className="btn btn-outline"
+                style={{ color: "#000" }}
+                type="submit"
+              >
                 Login
-              </button>
+              </a>
               &nbsp;
-              <button className="btn btn-success" type="submit">
+              <button className="btn btn-warning" type="submit">
                 Join
               </button>
             </div>
