@@ -9,10 +9,10 @@ const state = {
   datasets: [
     {
       label: "Mmol/l",
-      backgroundColor: "rgba(75,192,192,1)",
-      borderColor: "rgba(0,0,0,1)",
-      borderWidth: 2,
-      data: [65, 59, 80, 81, 56],
+      backgroundColor: "rgba(237, 155, 40)",
+      borderColor: "rgba(237, 155, 40)",
+      borderWidth: 1,
+      data: [65, 59, 80, 81, 56, 99],
     },
   ],
 };
@@ -24,18 +24,19 @@ export default class LineChart extends React.Component {
         <Line
           data={state}
           options={{
-            title: {
-              display: true,
-              text: "Average Rainfall per month",
-              fontSize: 20,
-            },
-            legend: {
-              display: true,
-              position: "right",
-            },
             elements: {
               Line: {
                 borderJoinStyle: "round",
+                tension: 0.5,
+              },
+              title: {
+                display: true,
+                text: "Average Rainfall per month",
+                fontSize: 20,
+              },
+              legend: {
+                display: true,
+                position: "right",
               },
             },
           }}

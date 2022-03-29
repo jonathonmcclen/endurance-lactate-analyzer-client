@@ -18,16 +18,6 @@ class Header extends React.Component {
                     Home
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/playlists">
-                    Playlists
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/Contact">
-                    Contact
-                  </a>
-                </li>
               </ul>
               <a href="/profile">Profile</a> &nbsp;
               <a
@@ -39,9 +29,9 @@ class Header extends React.Component {
                 Login
               </a>
               &nbsp;
-              <button className="btn btn-warning" type="submit">
+              <a href="/registration" className="btn btn-warning" type="submit">
                 Join
-              </button>
+              </a>
             </div>
           </div>
         </nav>

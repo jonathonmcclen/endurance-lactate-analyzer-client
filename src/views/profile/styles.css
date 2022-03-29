@@ -3,3 +3,12 @@
   height: 75%;
   margin: auto;
 }
+
+.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+canvas {
+  background-color: rgba(32, 35, 41, 1);
+}
