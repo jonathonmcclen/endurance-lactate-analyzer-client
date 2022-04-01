@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../assets/img/EnduranceLogo.png";
 
 class Header extends React.Component {
   render() {
@@ -6,7 +7,7 @@ class Header extends React.Component {
       <div>
         <nav className="navbar navbar-expand-sm navbar-light bg-light">
           <div className="container-fluid">
-            <h1>E.L.A</h1>
+            <img src={Logo} width="250px" />
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div
               className="collapse navbar-collapse"

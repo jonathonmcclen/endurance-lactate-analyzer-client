@@ -1,11 +1,15 @@
 import Title from "../../components/Title";
 import "./styles.css";
+import StepAndRepeat from "../../assets/img/EnduranceCardBgCropped.png";
 
 const Home = () => {
   return (
     <>
       <section className="dark">
-        <Title text="Home" />
+        <Title text="Home" width="100%" />
+        <div>
+          <img src={StepAndRepeat} width="100%" />
+        </div>
         <h1>Welcome to your endurance lactate analaizer</h1>
         <p>
           Morbi tristique dolor vel ante hendrerit, nec volutpat sem vestibulum.
