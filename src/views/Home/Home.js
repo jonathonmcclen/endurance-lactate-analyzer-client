@@ -1,6 +1,7 @@
 import Title from "../../components/Title";
 import "./styles.css";
 import StepAndRepeat from "../../assets/img/EnduranceCardBgCropped.png";
+import Marketing from "../../assets/img/ENDURANCE.png";
 
 const Home = () => {
   return (
@@ -27,6 +28,9 @@ const Home = () => {
           ad litora torquent per conubia nostra, per inceptos himenaeos. Ut in
           nulla tempus, euismod nisl eget, elementum justo.
         </p>
+        <div>
+          <img src={Marketing} width="100%" />
+        </div>
       </section>
     </>
   );

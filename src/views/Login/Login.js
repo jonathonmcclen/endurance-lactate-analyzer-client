@@ -16,7 +16,7 @@ const Login = () => {
                 className="form-control"
                 placeholder="000-000-0000"
               />
-              <label for="floatingInput">Phone Number</label>
+              <label for="floatingInput">Email</label>
             </div>
             <div>
               <div className="form-floating">
@@ -26,7 +26,7 @@ const Login = () => {
                   id="floatingPassword"
                   placeholder="Password"
                 />
-                <label for="floatingPassword">Email address</label>
+                <label for="floatingPassword">Password</label>
               </div>
 
               <div className="checkbox mb-3">
