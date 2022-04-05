@@ -1,30 +1,52 @@
 import "./styles.css";
+import React, {useState} from "react";
 
 const Login = () => {
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  function handleSubmit(e){
+    e.preventDefault()
+    fetch('/api/v1/login', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user) => console.log(user));
+      } else {
+        r.json().then((err) => console.log(err.errors));
+      }
+    });
+  }
   return (
     <>
       <div id="formContainer" className="text-center">
         <main className="form-signin">
-          <form>
+          <form onSubmit={handleSubmit}>
             <h1 style={{ color: "#fff" }}>Endurance Lactate Analizer</h1>
             <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
             <div className="form-floating">
               <input
                 id="phoneinput"
-                type="phone"
+                type="text"
                 className="form-control"
-                placeholder="000-000-0000"
+                value={username}
+                onChange={(e)=> setUsername(e.target.value)}
               />
               <label for="floatingInput">Email</label>
             </div>
             <div>
               <div className="form-floating">
                 <input
-                  type="email"
+                  type="text"
                   className="form-control"
                   id="floatingPassword"
                   placeholder="Password"
+                  value={password}
+                  onChange={(e)=> setPassword(e.target.value)}
                 />
                 <label for="floatingPassword">Password</label>
               </div>

@@ -61,6 +61,22 @@ const Registration = () => {
       return;
     }
     console.log(user, pwd);
+    fetch('/api/v1/signup', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: user,
+        password: pwd,
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user) => console.log(user))
+      } else {
+        r.json().then((err) => console.log(err.errors));
+      }
+    });
     setSuccess(true);
   };
 

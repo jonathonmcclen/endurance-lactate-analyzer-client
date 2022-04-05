@@ -17,9 +17,10 @@ import Registration from "./views/Registration";
 
 function App() {
 
-  fetch('http://localhost:3001/api/v1/readings')
-  .then(res => res.json())
-  .then(data => console.log(data))
+
+  // fetch('http://localhost:3001/api/v1/me')
+  // .then(res => res.json())
+  // .then(data => console.log(data))
   return (
     <>
       <Header />
