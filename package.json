@@ -1,5 +1,5 @@
 {
-  "name": "endurance=lactate-analyzer-client",
+  "name": "endurance-lactate-analyzer-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
