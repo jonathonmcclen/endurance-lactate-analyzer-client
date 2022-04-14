@@ -9,6 +9,13 @@ const Profile = () => {
       <div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
         <div className="card chart-container">
+          Year to Date Measurements
+          <LineChart />
+          <br/>
+          Monthly Measurements
+          <LineChart />
+          <br/>
+          <font></font>Current Measurements
           <LineChart />
         </div>
       </div>
