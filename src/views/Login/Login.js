@@ -1,9 +1,13 @@
 import "./styles.css";
 import React, {useState} from "react";
+import {useHistory} from 'react-router-dom'
 
-const Login = () => {
+function Login({setUser}){
+
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const history = useHistory()
+  
   function handleSubmit(e){
     e.preventDefault()
     fetch('/api/v1/login', {
@@ -14,7 +18,7 @@ const Login = () => {
       body: JSON.stringify({ username, password }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => console.log(user));
+        r.json().then((user) => setUser(user));
       } else {
         r.json().then((err) => console.log(err.errors));
       }
@@ -36,7 +40,7 @@ const Login = () => {
                 value={username}
                 onChange={(e)=> setUsername(e.target.value)}
               />
-              <label for="floatingInput">Email</label>
+              <label htmlFor="floatingInput">Email</label>
             </div>
             <div>
               <div className="form-floating">
