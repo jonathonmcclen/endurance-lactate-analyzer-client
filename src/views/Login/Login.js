@@ -1,27 +1,15 @@
 import "./styles.css";
-<<<<<<< HEAD
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
-const Login = () => {
+function Login({ setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
+
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/api/v1/login", {
-=======
-import React, {useState} from "react";
-import {useHistory} from 'react-router-dom'
-
-function Login({setUser}){
-
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
-  const history = useHistory()
-  
-  function handleSubmit(e){
-    e.preventDefault()
-    fetch('/api/v1/login', {
->>>>>>> 18acde3700763f41c048bd517f714e2dc876e816
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,33 +17,29 @@ function Login({setUser}){
       body: JSON.stringify({ username, password }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => console.log(user));
         r.json().then((user) => setUser(user));
       } else {
         r.json().then((err) => console.log(err.errors));
       }
     });
   }
+
   return (
     <>
       <div id="formContainer" className="text-center">
         <main className="form-signin form-box">
           <form onSubmit={handleSubmit}>
             <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
-
-<<<<<<< HEAD
-=======
             <div className="form-floating">
               <input
                 id="phoneinput"
                 type="text"
                 className="form-control"
                 value={username}
-                onChange={(e)=> setUsername(e.target.value)}
+                onChange={(e) => setUsername(e.target.value)}
               />
               <label htmlFor="floatingInput">Email</label>
             </div>
->>>>>>> 18acde3700763f41c048bd517f714e2dc876e816
             <div>
               <div className="form-floating">
                 <input
@@ -94,6 +78,6 @@ function Login({setUser}){
       </div>
     </>
   );
-};
+}
 
 export default Login;
