@@ -7,27 +7,21 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles.css";
 
-import "./styles.css";
-
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const Registration = () => {
   const userRef = useRef();
   const errRef = useRef();
-
   const [user, setUser] = useState("");
   const [validName, setValidName] = useState(false);
   const [userFocus, setUserFocus] = useState(false);
-
   const [pwd, setPwd] = useState("");
   const [validPwd, setValidPwd] = useState(false);
   const [pwdFocus, setPwdFocus] = useState(false);
-
   const [matchPwd, setMatchPwd] = useState("");
   const [validMatch, setValidMatch] = useState(false);
   const [matchFocus, setMatchFocus] = useState(false);
-
   const [errMsg, setErrMsg] = useState("");
   const [success, setSuccess] = useState(false);
 
@@ -86,15 +80,15 @@ const Registration = () => {
   return (
     <>
       {success ? (
-        <section id="formContainer">
+        <section>
           <h1>Success!</h1>
           <p>
             <a href="./Login">Sign In</a>
           </p>
         </section>
       ) : (
-        <section id="formContainer">
-          <div className="form-signin">
+        <div id="formContainer" className="text-center">
+          <main className="form-signin form-box">
             <p
               ref={errRef}
               className={errMsg ? "errmsg" : "offscreen"}
@@ -102,33 +96,36 @@ const Registration = () => {
             >
               {errMsg}
             </p>
-            <h1 style={{ color: "#fff" }}>Register</h1>
-
+            <h1>Register</h1>
             <form onSubmit={handleSubmit}>
-              <div className="form-floating">
-                <label>
-                  Username:
-                  <span className={validName ? "valid" : "hide"}>
-                    <FontAwesomeIcon icon={faCheck} />
-                  </span>
-                  <span className={validName || !user ? "hide" : "invalid"}>
-                    <FontAwesomeIcon icon={faTimes} />
-                  </span>
-                </label>
-                <input
-                  className="form-signin"
-                  type="text"
-                  id="username"
-                  ref={userRef}
-                  autoComplete="off"
-                  onChange={(e) => setUser(e.target.value)}
-                  required
-                  aria-invalid={validName ? "false" : "true"}
-                  aria-describedby="uidnote"
-                  onFocus={() => setUserFocus(true)}
-                  onBlur={() => setUserFocus(false)}
-                />
+              <div>
+                <div className="form-floating">
+                  <input
+                    type="text"
+                    id="username"
+                    placeholder="username"
+                    className="form-control"
+                    ref={userRef}
+                    autoComplete="off"
+                    onChange={(e) => setUser(e.target.value)}
+                    required
+                    aria-invalid={validName ? "false" : "true"}
+                    aria-describedby="uidnote"
+                    onFocus={() => setUserFocus(true)}
+                    onBlur={() => setUserFocus(false)}
+                  />
+                  <label htmlFor="username">
+                    Username
+                    <span className={validName ? "valid" : "hide"}>
+                      <FontAwesomeIcon icon={faCheck} />
+                    </span>
+                    <span className={validName || !user ? "hide" : "invalid"}>
+                      <FontAwesomeIcon icon={faTimes} />
+                    </span>
+                  </label>
+                </div>
               </div>
+
               <p
                 id="uidnote"
                 className={
@@ -141,20 +138,13 @@ const Registration = () => {
                 Must begin with a letter. <br />
                 Letters, numbers, underscores, hyphens allowed.
               </p>
+
               <div className="form-floating">
-                <label htmlFor="password">
-                  Password:
-                  <span className={validPwd ? "valid" : "hide"}>
-                    <FontAwesomeIcon icon={faCheck} />
-                  </span>
-                  <span className={validPwd || !pwd ? "hide" : "invalid"}>
-                    <FontAwesomeIcon icon={faTimes} />
-                  </span>
-                </label>
                 <input
-                  className="form-signin"
                   type="password"
                   id="password"
+                  className="form-control"
+                  placeholder="Password"
                   onChange={(e) => setPwd(e.target.value)}
                   required
                   aria-invalid={validPwd ? "false" : "true"}
@@ -162,7 +152,17 @@ const Registration = () => {
                   onFocus={() => setPwdFocus(true)}
                   onBlur={() => setPwdFocus(false)}
                 />
+                <label htmlFor="password">
+                  Password
+                  <span className={validPwd ? "valid" : "hide"}>
+                    <FontAwesomeIcon icon={faCheck} />
+                  </span>
+                  <span className={validPwd || !pwd ? "hide" : "invalid"}>
+                    <FontAwesomeIcon icon={faTimes} />
+                  </span>
+                </label>
               </div>
+
               <p
                 id="pwdnote"
                 className={pwdFocus && !validPwd ? "instructions" : "offscreen"}
@@ -179,9 +179,22 @@ const Registration = () => {
                 <span aria-label="dollar sign">$</span>
                 <span aria-label="percent">%</span>
               </p>
+
               <div className="form-floating">
+                <input
+                  type="password"
+                  id="confirm_pwd"
+                  onChange={(e) => setMatchPwd(e.target.value)}
+                  required
+                  placeholder="Confirm Password"
+                  className="form-control"
+                  aria-invalid={validMatch ? "false" : "true"}
+                  aria-describedby="confirmnote"
+                  onFocus={() => setMatchFocus(true)}
+                  onBlur={() => setMatchFocus(false)}
+                />
                 <label htmlFor="confirm_pwd">
-                  Confirm Password:
+                  Confirm Password
                   <span className={validMatch && matchPwd ? "valid" : "hide"}>
                     <FontAwesomeIcon icon={faCheck} />
                   </span>
@@ -191,19 +204,8 @@ const Registration = () => {
                     <FontAwesomeIcon icon={faTimes} />
                   </span>
                 </label>
-
-                <input
-                  className="form-signin"
-                  type="password"
-                  id="confirm_pwd"
-                  onChange={(e) => setMatchPwd(e.target.value)}
-                  required
-                  aria-invalid={validMatch ? "false" : "true"}
-                  aria-describedby="confirmnote"
-                  onFocus={() => setMatchFocus(true)}
-                  onBlur={() => setMatchFocus(false)}
-                />
               </div>
+
               <p
                 id="confirmnote"
                 className={
@@ -227,8 +229,8 @@ const Registration = () => {
                 <a href="./Login">Sign In</a>
               </span>
             </p>
-          </div>
-        </section>
+          </main>
+        </div>
       )}
     </>
   );

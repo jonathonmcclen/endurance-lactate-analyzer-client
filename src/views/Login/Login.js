@@ -25,20 +25,19 @@ const Login = () => {
       <div id="formContainer" className="text-center">
         <main className="form-signin form-box">
           <form onSubmit={handleSubmit}>
-            <h1>Endurance Lactate Analizer</h1>
             <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
-            <div className="form-floating">
-              <input
-                id="phoneinput"
-                type="text"
-                className="form-control"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <label for="floatingInput">Email</label>
-            </div>
             <div>
+              <div className="form-floating">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Email"
+                  value={password}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+                <label htmlFor="floatingPassword">Email</label>
+              </div>
               <div className="form-floating">
                 <input
                   type="text"
@@ -48,7 +47,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <label for="floatingPassword">Password</label>
+                <label htmlFor="floatingPassword">Password</label>
               </div>
 
               <div className="checkbox mb-3">

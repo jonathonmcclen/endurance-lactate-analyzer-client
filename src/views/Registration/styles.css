@@ -43,23 +43,25 @@
   color: #000;
 }
 
+.form-box{
+  border-radius: 30px;
+  background-color: #fff;
+  width: 500px;
+}
+
+.form-signin input {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  color: #000;
+}
+
 input[type="text"],
 input[type="password"],
 button,
 textarea {
   font-family: "Nunito", sans-serif;
-  font-size: 22px;
-  padding: 0.25rem;
   border-radius: 0.5rem;
-}
-
-label,
-button {
-  margin-top: 1rem;
-}
-
-button {
-  padding: 0.5rem;
 }
 
 .instructions {
