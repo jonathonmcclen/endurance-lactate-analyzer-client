@@ -5,6 +5,7 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./styles.css";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -61,7 +62,7 @@ const Registration = () => {
       return;
     }
     console.log(user, pwd);
-    fetch('/api/v1/signup', {
+    fetch("/api/v1/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +73,7 @@ const Registration = () => {
       }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => console.log(user))
+        r.json().then((user) => console.log(user));
       } else {
         r.json().then((err) => console.log(err.errors));
       }

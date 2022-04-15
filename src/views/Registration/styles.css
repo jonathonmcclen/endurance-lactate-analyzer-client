@@ -30,6 +30,12 @@
   color: #000;
 }
 
+.form-box{
+  border-radius: 30px;
+  background-color: #fff;
+  width: 500px;
+}
+
 .form-signin input {
   margin-bottom: 10px;
   border-top-left-radius: 0;

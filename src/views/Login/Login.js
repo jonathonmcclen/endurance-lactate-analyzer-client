@@ -1,12 +1,12 @@
 import "./styles.css";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Login = () => {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
-  function handleSubmit(e){
-    e.preventDefault()
-    fetch('/api/v1/login', {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/api/v1/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -23,9 +23,9 @@ const Login = () => {
   return (
     <>
       <div id="formContainer" className="text-center">
-        <main className="form-signin">
+        <main className="form-signin form-box">
           <form onSubmit={handleSubmit}>
-            <h1 style={{ color: "#fff" }}>Endurance Lactate Analizer</h1>
+            <h1>Endurance Lactate Analizer</h1>
             <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
             <div className="form-floating">
@@ -34,7 +34,7 @@ const Login = () => {
                 type="text"
                 className="form-control"
                 value={username}
-                onChange={(e)=> setUsername(e.target.value)}
+                onChange={(e) => setUsername(e.target.value)}
               />
               <label for="floatingInput">Email</label>
             </div>
@@ -46,7 +46,7 @@ const Login = () => {
                   id="floatingPassword"
                   placeholder="Password"
                   value={password}
-                  onChange={(e)=> setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <label for="floatingPassword">Password</label>
               </div>
