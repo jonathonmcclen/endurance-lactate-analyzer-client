@@ -1,8 +1,17 @@
 import React from "react";
 import Logo from "../assets/img/EnduranceLogo.png";
 
-class Header extends React.Component {
-  render() {
+
+function Header({user, setUser}){
+
+  function handleLogout(){
+    fetch("/api/v1/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser('guest');
+      }
+    });
+  
+  }
     return (
       <div>
         <nav className="navbar navbar-expand-sm navbar-light bg-light">
@@ -20,25 +29,25 @@ class Header extends React.Component {
                   </a>
                 </li>
               </ul>
-              <a href="/profile">Profile</a> &nbsp;
-              <a
+              {user !== 'guest' ? <a href="/profile">Profile</a> : null} &nbsp;
+              {user === 'guest' ? <a
                 href="/login"
                 className="btn btn-outline"
                 style={{ color: "#000" }}
                 type="submit"
               >
                 Login
-              </a>
+              </a> : <button onClick={handleLogout}>Signout</button>}
               &nbsp;
-              <a href="/registration" className="btn btn-warning" type="submit">
+              {user === 'guest' ? <a href="/registration" className="btn btn-warning" type="submit">
                 Join
-              </a>
+              </a> : null}
             </div>
           </div>
         </nav>
       </div>
     );
   }
-}
+
 
 export default Header;
