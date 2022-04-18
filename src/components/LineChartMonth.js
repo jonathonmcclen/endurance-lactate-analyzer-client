@@ -24,7 +24,8 @@ function LineChartMonth(){
     ],
   }
   return (
-    <div>
+    <div className="DailyLineChart">
+      Monthly Measurements
       <Line
         data={state}
         options={{
@@ -35,7 +36,7 @@ function LineChartMonth(){
             },
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Blood Lactate Measurements",
               fontSize: 20,
             },
             legend: {

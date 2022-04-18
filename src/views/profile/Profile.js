@@ -15,30 +15,18 @@ function Profile(){
     .then(data => setAllReadings(data))
   }, [])
 
-  
-  
-  
-
-  
-  const graphTwoReadings = [allReadings[5], allReadings[6], allReadings[7], allReadings[8], allReadings[9]]
-
-  const graphThreeReadings = [allReadings[10], allReadings[11], allReadings[12], allReadings[13], allReadings[14]]
-
-  console.log(graphThreeReadings)
   return (
     <section className="dark">
       <Title text="Username's Profile" />
       <div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
         <div className="card chart-container">
-          Year to Date Measurements
           <LineChartYear />
           <br/>
-          Monthly Measurements
+          <div className="NotYearlyMeasurements">
           <LineChartMonth />
-          <br/>
-          Current Measurements
           <LineChart />
+          </div>
         </div>
       </div>
     </section>

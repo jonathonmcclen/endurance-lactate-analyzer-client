@@ -25,6 +25,7 @@ function LineChartYear(){
   }
   return (
     <div>
+      Yearly Measurements
       <Line
         data={state}
         options={{
@@ -35,7 +36,7 @@ function LineChartYear(){
             },
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Blood Lactate Measurements",
               fontSize: 20,
             },
             legend: {

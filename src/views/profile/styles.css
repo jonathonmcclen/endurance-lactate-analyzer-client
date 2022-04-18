@@ -2,7 +2,8 @@
   width: 75%;
   height: 75%;
   margin: auto;
-  color:rgba(32, 35, 41, 1)
+  color:rgba(32, 35, 41, 1);
+  display: flex;
 }
 
 .dark {
@@ -14,3 +15,14 @@ canvas {
   background-color: rgba(32, 35, 41, 1);
 }
 
+.NotYearlyMeasurements {
+  flex: auto;
+  /* display: inline-block; */
+  width: 35%;
+  height: 35%;
+  margin: auto;
+}
+
+.DailyLineChart {
+  float: left;
+}

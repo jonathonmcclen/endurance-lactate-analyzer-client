@@ -11,7 +11,6 @@ function LineChart(){
   }
   
   
-  
   const state = {
     labels: [...graphOneReadings.bpm],
     datasets: [
@@ -25,7 +24,8 @@ function LineChart(){
     ],
   }
   return (
-    <div>
+    <div className="DailyLineChart">
+      Current Measurements
       <Line
         data={state}
         options={{
@@ -36,7 +36,7 @@ function LineChart(){
             },
             title: {
               display: true,
-              text: "Average Rainfall per month",
+              text: "Blood Lactate Measurements",
               fontSize: 20,
             },
             legend: {
