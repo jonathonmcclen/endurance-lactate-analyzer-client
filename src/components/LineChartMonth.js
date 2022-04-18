@@ -2,25 +2,24 @@ import React, {useState} from "react";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
-function LineChart(){
+function LineChartMonth(){
 
   
-  const graphOneReadings = {
-    bpm: [133, 151, 165, 170, 185],
-    mmol: [1.3, 1.7, 2.3, 2.6, 3.7]
-  }
-  
+    const graphTwoReadings = {
+        bpm: [125, 133, 155, 157, 168],
+        mmol: [0.9, 1.4, 2.2, 2.3, 2.7]
+      }
   
   
   const state = {
-    labels: [...graphOneReadings.bpm],
+    labels: [...graphTwoReadings.bpm],
     datasets: [
       {
         label: "Mmol/l",
         backgroundColor: "rgba(237, 155, 40)",
         borderColor: "rgba(237, 155, 40)",
         borderWidth: 1,
-        data: [...graphOneReadings.mmol],
+        data: [...graphTwoReadings.mmol],
       },
     ],
   }
@@ -54,4 +53,4 @@ function LineChart(){
     
 
 
-export default LineChart
+export default LineChartMonth
