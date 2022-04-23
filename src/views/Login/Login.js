@@ -30,16 +30,6 @@ function Login({ setUser }) {
         <main className="form-signin form-box">
           <form onSubmit={handleSubmit}>
             <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
-            <div className="form-floating">
-              <input
-                id="phoneinput"
-                type="text"
-                className="form-control"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <label htmlFor="floatingInput">Email</label>
-            </div>
             <div>
               <div className="form-floating">
                 <input
@@ -72,7 +62,10 @@ function Login({ setUser }) {
             <button className="w-100 btn btn-lg btn-warning" type="submit">
               Login
             </button>
-            <p className="mt-5 mb-3 text-muted">© 2017–2021</p>
+            <p style={{ margin: "10px 0 0 0 " }}>
+              Looking to <a href="/registration">create an account?</a>
+            </p>
+            <p className="mt-1 mb-3 text-muted">© 2017–2021</p>
           </form>
         </main>
       </div>

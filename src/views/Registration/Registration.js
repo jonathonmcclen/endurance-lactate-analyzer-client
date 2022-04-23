@@ -103,7 +103,7 @@ const Registration = () => {
                   <input
                     type="text"
                     id="username"
-                    placeholder="username"
+                    placeholder="Email"
                     className="form-control"
                     ref={userRef}
                     autoComplete="off"
@@ -115,7 +115,7 @@ const Registration = () => {
                     onBlur={() => setUserFocus(false)}
                   />
                   <label htmlFor="username">
-                    Username
+                    Email
                     <span className={validName ? "valid" : "hide"}>
                       <FontAwesomeIcon icon={faCheck} />
                     </span>

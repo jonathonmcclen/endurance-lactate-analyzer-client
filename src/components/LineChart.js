@@ -1,16 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
-function LineChart(){
-
-  
+function LineChart() {
   const graphOneReadings = {
     bpm: [133, 151, 165, 170, 185],
-    mmol: [1.3, 1.7, 2.3, 2.6, 3.7]
-  }
-  
-  
+    mmol: [1.3, 1.7, 2.3, 2.6, 3.7],
+  };
+
   const state = {
     labels: [...graphOneReadings.bpm],
     datasets: [
@@ -22,7 +19,7 @@ function LineChart(){
         data: [...graphOneReadings.mmol],
       },
     ],
-  }
+  };
   return (
     <div className="DailyLineChart">
       Current Measurements
@@ -50,8 +47,4 @@ function LineChart(){
   );
 }
 
-
-    
-
-
-export default LineChart
+export default LineChart;
