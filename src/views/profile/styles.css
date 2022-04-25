@@ -1,0 +1,16 @@
+.chart-container {
+  width: 75%;
+  height: 75%;
+  margin: auto;
+  color:rgba(32, 35, 41, 1);
+  display: flex;
+}
+
+.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+canvas {
+  background-color: rgba(32, 35, 41, 1);
+}
