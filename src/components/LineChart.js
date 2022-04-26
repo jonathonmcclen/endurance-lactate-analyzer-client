@@ -13,8 +13,8 @@ function LineChart() {
     datasets: [
       {
         label: "Mmol/l",
-        backgroundColor: "rgba(237, 155, 40)",
-        borderColor: "rgba(237, 155, 40)",
+        backgroundColor: "rgba(24, 66, 120)",
+        borderColor: "rgba(241, 241, 241)",
         borderWidth: 1,
         data: [...graphOneReadings.mmol],
       },
