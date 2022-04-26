@@ -36,7 +36,7 @@ function Profile({user}) {
             </div>
           </div>
           <div className="col-md-5">
-            <LineChartYear />
+            <LineChart /> 
           </div>
           <div className="col-1"> </div>
         </div>
@@ -46,7 +46,7 @@ function Profile({user}) {
             <LineChartMonth />
           </div>
           <div className="col-md-5">
-            <LineChart />
+            <LineChartYear />
           </div>
           <div className="col-1"> </div>
         </div>
