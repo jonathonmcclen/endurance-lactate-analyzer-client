@@ -16,7 +16,7 @@ function Profile({user}) {
 
   return (
     <section className="dark">
-      <Title text={user.username}/>
+      <Title text={"Username"}/>
       <div style={{ padding: "0 0 60px 0" }}>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
