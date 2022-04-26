@@ -59,7 +59,7 @@ function Login({ setUser }) {
                 </label>
               </div>
             </div>
-            <button className="w-100 btn btn-lg btn-warning" type="submit">
+            <button style={{backgroundColor: '#3b76c4', color: 'white'}} className="w-100 btn btn-lg btn-orchid" type="submit">
               Login
             </button>
             <p style={{ margin: "10px 0 0 0 " }}>
