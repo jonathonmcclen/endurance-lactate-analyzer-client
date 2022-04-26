@@ -7,46 +7,23 @@ const Home = () => {
   return (
     <>
       <section className="light">
-        <Title text="Home" width="100%" />
+        <Title text="" width="100%" />
         <div>
           <img src={StepAndRepeat} width="100%" />
         </div>
 
-        <section style={{ padding: "40px" }}>
+        <section style={{ 
+          padding: "40px"
+          }}>
           <div className="row">
             <div className="col-1"> </div>
             {/* <div className="col-4">
               <img src={Marketing} width="100%" />{" "}
             </div> */}
-            <div style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignContent: 'center',
-              width: '100%',
-
-              
-            }}>
+            <div>
               <h1>Endurance lactate analayzer</h1>
               <p>
-                Morbi tristique dolor vel ante hendrerit, nec volutpat sem
-                vestibulum. Nam vulputate consectetur lacus, ut ornare quam
-                commodo vitae. Quisque congue augue eget purus tempor facilisis.
-                Cras fringilla dolor a quam mattis fermentum. Curabitur quis
-                tellus mi. Nam vitae posuere augue, eu hendrerit diam. Vivamus
-                quis accumsan ipsum. Suspendisse finibus velit eros, et sagittis
-                arcu placerat at. Fusce et erat ac nisl aliquet dignissim id
-              </p>
-              <p>
-                quis odio. Mauris fringilla, nulla sed imperdiet tempus, velit
-                neque ultrices risus, vel mattis libero turpis et purus. Proin
-                blandit arcu ante, ac porta enim ullamcorper sed. Nunc non
-                tristique lacus, et rutrum eros. In arcu augue, hendrerit in
-                mauris non, posuere eleifend purus. Maecenas sollicitudin leo id
-                turpis ultrices, eu congue tellus consectetur. Class aptent
-                taciti sociosqu ad litora torquent per conubia nostra, per
-                inceptos himenaeos. Ut in nulla tempus, euismod nisl eget,
-                elementum justo.
+              ENDURANCE is the next step in biometric feedback for endurance athletes. Using data gathered from blood lactate testing, our system enables athletes to view real-time status on their lactate levels. Easily track, store, and share data with coaches, physicians, and physical therapists, and push the boundaries of your performance with ENDURANCE.
               </p>
               <div className="row">
                 <div className="col-4"> </div>
