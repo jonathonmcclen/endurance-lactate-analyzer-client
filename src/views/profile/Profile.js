@@ -15,8 +15,8 @@ function Profile({user}) {
   }, []);
 
   return (
-    <section className="dark">
-      <Title text={"Username"}/>
+    <section className="light">
+      <Title text={"Username's Profile"}/>
       <div style={{ padding: "0 0 60px 0" }}>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
