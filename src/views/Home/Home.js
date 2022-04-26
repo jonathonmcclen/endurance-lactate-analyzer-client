@@ -1,12 +1,12 @@
 import Title from "../../components/Title";
 import "./styles.css";
-import StepAndRepeat from "../../assets/img/EnduranceCardBgCropped.png";
+import StepAndRepeat from "../../assets/img/endurance_home_image.png";
 import Marketing from "../../assets/img/ENDURANCE.png";
 
 const Home = () => {
   return (
     <>
-      <section className="dark">
+      <section className="light">
         <Title text="Home" width="100%" />
         <div>
           <img src={StepAndRepeat} width="100%" />
@@ -15,10 +15,18 @@ const Home = () => {
         <section style={{ padding: "40px" }}>
           <div className="row">
             <div className="col-1"> </div>
-            <div className="col-4">
+            {/* <div className="col-4">
               <img src={Marketing} width="100%" />{" "}
-            </div>
-            <div className="col-6">
+            </div> */}
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignContent: 'center',
+              width: '100%',
+
+              
+            }}>
               <h1>Endurance lactate analayzer</h1>
               <p>
                 Morbi tristique dolor vel ante hendrerit, nec volutpat sem
@@ -43,7 +51,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-4"> </div>
                 <div className="col-4">
-                  <a href="/registration" className="btn btn-lg btn-warning">
+                  <a href="/registration" className="btn btn-lg btn-orchird" style={{backgroundColor: '#3b76c4', color:"white"}}>
                     Sign Up
                   </a>
                 </div>
