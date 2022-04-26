@@ -217,8 +217,9 @@ const Registration = () => {
               </p>
 
               <button
-                className="w-100 btn btn-lg btn-warning"
+                className="w-100 btn btn-lg btn-outline"
                 disabled={!validName || !validPwd || !validMatch ? true : false}
+                style={{backgroundColor: '#3b76c4', color: 'white'}}
               >
                 Sign Up
               </button>
