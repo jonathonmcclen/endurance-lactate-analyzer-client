@@ -38,7 +38,7 @@ useEffect(()=>{
       <Router>
         <Route exact path="/" component={Home} />
         <Route path="/login"><Login setUser={setUser}/></Route>
-        <Route path="/profile" component={Profile} />
+        <Route path="/profile"><Profile user={user}/></Route> 
         <Route path="/registration" component={Registration}/>
       </Router>
       <Footer />

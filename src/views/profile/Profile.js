@@ -5,7 +5,7 @@ import "./styles.css";
 import Title from "../../components/Title";
 import { useEffect, useState } from "react";
 
-function Profile() {
+function Profile({user}) {
   const [allReadings, setAllReadings] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function Profile() {
 
   return (
     <section className="dark">
-      <Title text="Username's Profile" />
+      <Title text={user.username}/>
       <div style={{ padding: "0 0 60px 0" }}>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 
