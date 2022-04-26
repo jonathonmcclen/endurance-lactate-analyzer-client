@@ -36,7 +36,7 @@ function Login({ setUser }) {
                   type="text"
                   className="form-control"
                   placeholder="Email"
-                  value={password}
+                  value={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
                 <label htmlFor="floatingPassword">Email</label>

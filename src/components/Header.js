@@ -1,5 +1,6 @@
 import React from "react";
-import Logo from "../assets/img/EnduranceLogo.png";
+import Logo from "../assets/img/logo_2.png";
+import '.././App.css'
 
 function Header({ user, setUser }) {
   function handleLogout() {
@@ -10,8 +11,9 @@ function Header({ user, setUser }) {
     });
   }
   return (
-    <div>
-      <nav className="navbar navbar-expand-sm navbar-light bg-light">
+    <div id='header-container-div'>
+      <nav className="navbar navbar-expand-sm navbar-orchid bg-orchid">
+      
         <div className="container-fluid">
           <a href="/">
             <img src={Logo} width="250px" />
@@ -22,7 +24,7 @@ function Header({ user, setUser }) {
               <li className="nav-item"></li>
             </ul>
             {user !== "guest" ? (
-              <a className="btn btn-warning" href="/profile">
+              <a className="btn btn-outline" href="/profile" style={{ color: "white" }}>
                 Profile
               </a>
             ) : null}{" "}
@@ -31,19 +33,19 @@ function Header({ user, setUser }) {
               <a
                 href="/login"
                 className="btn btn-outline"
-                style={{ color: "#000" }}
+                style={{ color: "white" }}
                 type="submit"
               >
                 Login
               </a>
             ) : (
-              <button className="btn btn-warning" onClick={handleLogout}>
+              <button className="btn btn-outline" onClick={handleLogout} style={{ color: "white" }}>
                 Signout
               </button>
             )}
             &nbsp;
             {user === "guest" ? (
-              <a href="/registration" className="btn btn-warning" type="submit">
+              <a href="/registration" className="btn btn-outline" type="submit" style={{ color: "white" }}>
                 Join
               </a>
             ) : null}
