@@ -24,7 +24,7 @@ function Header({ user, setUser }) {
               <li className="nav-item"></li>
             </ul>
             {user !== "guest" ? (
-              <a className="btn btn-outline" href="/profile" style={{ color: "white" }}>
+              <a className="btn btn-outline" href="/profile" style={{ color: "white",  fontWeight: 'bolder'}}>
                 Profile
               </a>
             ) : null}{" "}
@@ -33,19 +33,19 @@ function Header({ user, setUser }) {
               <a
                 href="/login"
                 className="btn btn-outline"
-                style={{ color: "white" }}
+                style={{ color: "white",  fontWeight: 'bolder'}}
                 type="submit"
               >
                 Login
               </a>
             ) : (
-              <button className="btn btn-outline" onClick={handleLogout} style={{ color: "white" }}>
+              <button className="btn btn-outline" onClick={handleLogout} style={{ color: "white",  fontWeight: 'bolder' }}>
                 Signout
               </button>
             )}
             &nbsp;
             {user === "guest" ? (
-              <a href="/registration" className="btn btn-outline" type="submit" style={{ color: "white" }}>
+              <a href="/registration" className="btn btn-outline" type="submit" style={{ color: "white", fontWeight: 'bolder'}}>
                 Join
               </a>
             ) : null}
