@@ -16,17 +16,10 @@ const Home = () => {
           padding: "40px"
           }}>
           <div className="row">
-            {/* <div className="col-1"> </div> */}
-            {/* <div className="col-4">
-              <img src={Marketing} width="100%" />{" "}
-            </div> */}
-<<<<<<< Updated upstream
+
             <div id='enduracne-about-text-container'>
-              <h1>Endurance lactate analayzer</h1>
-=======
-            <div>
               <h1>Endurance Lactate Analyzer</h1>
->>>>>>> Stashed changes
+
               <p>
               ENDURANCE is the next step in biometric feedback for endurance athletes. Using data gathered from blood lactate testing, our system enables athletes to view real-time status on their lactate levels. Easily track, store, and share data with coaches, physicians, and physical therapists, and push the boundaries of your performance with ENDURANCE.
               </p>
