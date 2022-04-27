@@ -42,7 +42,7 @@ class Footer extends React.Component {
           >
             © 2022 Copyright: &nbsp;
             <a className="text-white" href="#">
-              Endurance Lactate Analizer
+              Endurance Lactate Analyzer
             </a>
           </div>
         </footer>
