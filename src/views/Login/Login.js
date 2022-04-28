@@ -1,6 +1,11 @@
-import "./styles.css";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+
+//import icons
+
+import Google from "../../assets/img/Google.png";
+import Github from "../../assets/img/Github.png";
+import Facebook from "../../assets/img/Facebook.png";
 
 function Login({ setUser }) {
   const [username, setUsername] = useState("");
@@ -59,9 +64,29 @@ function Login({ setUser }) {
                 </label>
               </div>
             </div>
-            <button style={{backgroundColor: '#3b76c4', color: 'white'}} className="w-100 btn btn-lg btn-orchid" type="submit">
+            <button
+              style={{ backgroundColor: "#3b76c4", color: "white" }}
+              className="w-100 btn btn-lg btn-orchid"
+              type="submit"
+            >
               Login
             </button>
+            <hr />
+
+            <p>or login with</p>
+
+            <div className="row">
+              <div className="col-4">
+                <img src={Google} />
+              </div>
+              <div className="col-4">
+                <img src={Facebook} />
+              </div>
+              <div className="col-4">
+                <img src={Github} />
+              </div>
+            </div>
+
             <p style={{ margin: "10px 0 0 0 " }}>
               Looking to <a href="/registration">create an account?</a>
             </p>

@@ -7,6 +7,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles.css";
 
+import Google from "../../assets/img/Google.png";
+import Github from "../../assets/img/Github.png";
+import Facebook from "../../assets/img/Facebook.png";
+
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
@@ -219,11 +223,26 @@ const Registration = () => {
               <button
                 className="w-100 btn btn-lg btn-outline"
                 disabled={!validName || !validPwd || !validMatch ? true : false}
-                style={{backgroundColor: '#3b76c4', color: 'white'}}
+                style={{ backgroundColor: "#3b76c4", color: "white" }}
               >
                 Sign Up
               </button>
             </form>
+            <hr />
+
+            <p>or login with</p>
+
+            <div className="row">
+              <div className="col-4">
+                <img src={Google} />
+              </div>
+              <div className="col-4">
+                <img src={Facebook} />
+              </div>
+              <div className="col-4">
+                <img src={Github} />
+              </div>
+            </div>
             <p>
               Already registered? <br />
               <span className="line">
