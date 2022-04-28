@@ -16,17 +16,15 @@ function Connect({ setUser }) {
     setConnected(true);
   }
 
-  if (connected) {
-    return (
-      <div>
-        <img src={device} />
-        <h2>Your device is connected!</h2>
-      </div>
-    );
-  } else {
-    return (
-      <div id="formContainer" className="text-center">
-        <main className="form-signin form-box">
+  return (
+    <div id="formContainer" className="text-center">
+      <main className="form-signin form-box">
+        {connected ? (
+          <div>
+            <img src={device} />
+            <h2>Your device is connected!</h2>
+          </div>
+        ) : (
           <form onSubmit={handleSubmit}>
             <h1 className="h3 mb-3 fw-normal">Device</h1>
             <div>
@@ -59,10 +57,10 @@ function Connect({ setUser }) {
             </p>
             <p className="mt-1 mb-3 text-muted">© 2017–2021</p>
           </form>
-        </main>
-      </div>
-    );
-  }
+        )}
+      </main>
+    </div>
+  );
 }
 
 export default Connect;
